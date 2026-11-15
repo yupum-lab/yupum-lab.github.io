@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yupum-lab.github.io/sitemap.xml
