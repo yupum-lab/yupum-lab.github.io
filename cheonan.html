@@ -280,6 +280,24 @@
       linear-gradient(180deg, rgba(24, 33, 47, 0.58) 0%, rgba(24, 33, 47, 0.72) 55%, rgba(24, 33, 47, 0.88) 100%);
   }
 
+  /* champagne-gold inner frame ── 정중함을 주는 이중 헤어라인 */
+  .hero-frame {
+    position: absolute;
+    inset: 12px;
+    z-index: 1;
+    border: 1px solid rgba(196, 162, 101, 0.72);
+    border-radius: 1px;
+    box-shadow: 0 0 22px rgba(196, 162, 101, 0.12);
+    pointer-events: none;
+  }
+
+  .hero-frame::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(196, 162, 101, 0.3);
+  }
+
   .hero-eyebrow {
     display: inline-block;
     font-size: 11.5px;
@@ -950,6 +968,7 @@
     <!-- HERO -->
     <section class="hero">
       <img class="hero-img" src="assets/hero.webp" width="1200" height="800" alt="천안 정리 현장의 조용한 빈 거실" fetchpriority="high">
+      <div class="hero-frame" aria-hidden="true"></div>
       <nav class="crumb" aria-label="위치"><a href="./">유품정리연구소</a> · 천안</nav>
       <p class="hero-eyebrow">천안 전지역 · 시내와 읍면</p>
       <h1>천안 유품정리</h1>
